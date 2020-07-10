@@ -13,7 +13,8 @@ public class ClaseHija_Deposito extends ClasePadre_Abstracta {
     
     
     public void Transacciones(){
-        System.out.println("Cuanto desea depositar?");
+        try {
+            System.out.println("Cuanto desea depositar?");
         Deposito();
         
         transacciones = getSaldo();
@@ -22,5 +23,11 @@ public class ClaseHija_Deposito extends ClasePadre_Abstracta {
         System.out.println("Depositaste en tu cuenta: " + deposito);
         System.out.println("Tu nuevo saldo en: " + getSaldo());
         System.out.println("------------------------------------");
+        
+        } catch (Exception e) {
+            
+            System.out.println("Este es el error econtrado " + e );
+        }
+        
     }
 }
